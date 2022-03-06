@@ -12,6 +12,7 @@ namespace ConsoleAppProject
     /// 
     /// This Project has been modified by:
     /// Derek Peacock 05/02/2022
+    /// Hakeem Khares 
     /// </summary>
     public static class Program
     {
@@ -22,12 +23,12 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.WriteLine(" =================================================");
             Console.WriteLine("    BNU CO453 Applications Programming 2021-2022! ");
-            Console.WriteLine("        by Derek                                  ");
+            Console.WriteLine("                                                  ");
             Console.WriteLine(" =================================================");
             Console.WriteLine();
 
-            DistanceConverter converter = new DistanceConverter();
-            converter.Run();
+            Application converter = new Application();
+            converter.ConvertDistance();
         }
     }
 }
