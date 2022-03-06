@@ -53,6 +53,9 @@ namespace ConsoleAppProject.App01
 
             OutputDistance();
 
+            Application converter = new Application();
+
+            converter.ConvertDistance();
         }
 
 
@@ -120,9 +123,6 @@ namespace ConsoleAppProject.App01
             {
                 Console.WriteLine("------------------------");
                 Console.WriteLine("Chose one of the three options available.");
-                System.Threading.Thread.Sleep(5000); // 5 Seconds delay
-
-                Console.Clear();
 
                 Application converter = new Application();
 
@@ -195,6 +195,7 @@ namespace ConsoleAppProject.App01
         {
             Console.WriteLine("\n-------------------------------");
             Console.WriteLine("     Distance Converter      ");
+            Console.WriteLine("        Hakeem Khares        ");
             Console.WriteLine("-------------------------------\n");
 
         }
