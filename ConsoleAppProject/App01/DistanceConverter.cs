@@ -121,7 +121,7 @@ namespace ConsoleAppProject.App01
             }
             else
             {
-                Console.WriteLine("------------------------");
+                Console.WriteLine("-----------------------------------------");
                 Console.WriteLine("Chose one of the three options available.");
 
                 Application converter = new Application();
