@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
 
 namespace ConsoleAppProject.App04
 {
@@ -20,16 +20,21 @@ namespace ConsoleAppProject.App04
     ///</author> 
     public class NewsFeed
     {
-        private readonly List<MessagePost> messages;
-        private readonly List<PhotoPost> photos;
 
+        public List<Post> posts { get; }
+        public int itemNumber;
         ///<summary>
         /// Construct an empty news feed.
         ///</summary>
         public NewsFeed()
         {
-            messages = new List<MessagePost>();
-            photos = new List<PhotoPost>();
+            posts = new List<Post>();
+            
+            MessagePost post = new MessagePost("Ye", "I love Kanye");
+            AddMessagePost(post);
+
+            PhotoPost photoPost = new PhotoPost("Elon Musk", "Stonks.jpg", "Digest Bitcoin");
+            AddPhotoPost(photoPost);
         }
 
 
@@ -40,7 +45,7 @@ namespace ConsoleAppProject.App04
         ///</summary>
         public void AddMessagePost(MessagePost message)
         {
-            messages.Add(message);
+            posts.Add(message);
         }
 
         ///<summary>
@@ -50,7 +55,7 @@ namespace ConsoleAppProject.App04
         ///</summary>
         public void AddPhotoPost(PhotoPost photo)
         {
-            photos.Add(photo);
+            posts.Add(photo);
         }
 
         ///<summary>
@@ -60,17 +65,13 @@ namespace ConsoleAppProject.App04
         public void Display()
         {
             // display all text posts
-            foreach (MessagePost message in messages)
+            foreach (var (item, index) in posts.Select((value, x) => (value, x)))
             {
-                message.Display();
-                Console.WriteLine();   // empty line between posts
-            }
-
-            // display all photos
-            foreach (PhotoPost photo in photos)
-            {
-                photo.Display();
-                Console.WriteLine();   // empty line between posts
+                itemNumber = index + 1;
+                Console.WriteLine("-------------------------");
+                Console.WriteLine($"{itemNumber}");
+                item.Display();
+                Console.WriteLine();
             }
         }
     }

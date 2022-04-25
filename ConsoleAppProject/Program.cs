@@ -1,6 +1,7 @@
 ﻿using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using System;
 
 namespace ConsoleAppProject
@@ -35,6 +36,7 @@ namespace ConsoleAppProject
             Console.WriteLine("1) APP01-DISTANCE CONVERTER");
             Console.WriteLine("2) APP02-BMI CALCULATOR");
             Console.WriteLine("3) APP03-GRADE CALCULATOR");
+            Console.WriteLine("4) APP04-SOCIAL NETWORK");
             Console.WriteLine("--------------------------------");
             string choice = Console.ReadLine();
 
@@ -61,7 +63,8 @@ namespace ConsoleAppProject
             }
             else if (choice == "4")
             {
-
+                Network DispayMenu = new Network();
+                DispayMenu.DisplayMenu();
             }
             else
             {
