@@ -2,6 +2,7 @@
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
 using ConsoleAppProject.App04;
+using ConsoleAppProject.App05;
 using System;
 
 namespace ConsoleAppProject
@@ -37,6 +38,7 @@ namespace ConsoleAppProject
             Console.WriteLine("2) APP02-BMI CALCULATOR");
             Console.WriteLine("3) APP03-GRADE CALCULATOR");
             Console.WriteLine("4) APP04-SOCIAL NETWORK");
+            Console.WriteLine("5) APP05-ROCK PAPER SCISSORS GAME");
             Console.WriteLine("--------------------------------");
             string choice = Console.ReadLine();
 
@@ -66,11 +68,15 @@ namespace ConsoleAppProject
                 Network DispayMenu = new Network();
                 DispayMenu.DisplayMenu();
             }
+            else if (choice == "5")
+            {
+               RPS rock = new RPS();
+                rock.Game();
+            }
             else
             {
-                Console.WriteLine("Please pick a number between 1-4");
+                Console.WriteLine("Please pick a number between 1-5");
+            }
             }
         }
     }
-}
-
