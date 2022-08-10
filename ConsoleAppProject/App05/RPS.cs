@@ -7,13 +7,18 @@ namespace ConsoleAppProject.App05
 
         public void Game()
             {
-                Random random = new Random();
-                bool playAgain = true;
-                String player;
-                String computer;
-                String answer;
+             Random random = new Random();
+             bool playAgain = true;
+             String player;
+             String computer;
+             String answer;
 
-                while (playAgain)
+             Console.Write("------------------------------------\n");
+             Console.Write("ROCK PAPER SCISSORS by Hakeem KHARES\n");
+             Console.Write("------------------------------------\n");
+
+            while (playAgain)
+
                 {
                     player = "";
                     computer = "";
@@ -24,7 +29,6 @@ namespace ConsoleAppProject.App05
                         player = Console.ReadLine();
                         player = player.ToLower();
                     }
-
 
                     switch (random.Next(1, 4))
                     {
@@ -105,7 +109,6 @@ namespace ConsoleAppProject.App05
 
                 Console.WriteLine("Thanks for playing!");
 
-                Console.ReadKey();
             }
         }
     }
